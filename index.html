@@ -27,7 +27,12 @@
 
       try {
         // Send GET request to the provided URL
-        const response = await fetch(url);
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'ngrok-skip-browser-warning': 'true',
+          }
+        });
         const data = await response.json();
         
         // Display the response data in the <pre> tag
