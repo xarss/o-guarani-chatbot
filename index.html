@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastAPI Frontend</title>
+</head>
+<body>
+  <h1>FastAPI Example Frontend</h1>
+
+  <label for="url">Enter the FastAPI URL (ngrok): </label>
+  <input type="text" id="url" placeholder="e.g., http://<ngrok_subdomain>.ngrok.io">
+  <button onclick="fetchData()">Send GET Request</button>
+
+  <h2>Response:</h2>
+  <pre id="response"></pre>
+
+  <script>
+    // Function to handle GET request
+    async function fetchData() {
+      const url = document.getElementById('url').value.trim();
+      
+      if (!url) {
+        alert('Please enter the ngrok URL!');
+        return;
+      }
+
+      try {
+        // Send GET request to the provided URL
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        // Display the response data in the <pre> tag
+        document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        // Handle any errors (e.g., invalid URL, network issues)
+        document.getElementById('response').textContent = 'Error: ' + error.message;
+      }
+    }
+  </script>
+</body>
+</html>
