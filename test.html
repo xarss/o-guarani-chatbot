@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Textarea with Icon Button</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .textarea-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .textarea-wrapper textarea {
+      width: 100%;
+      padding-right: 40px; /* Space for the icon */
+      box-sizing: border-box;
+    }
+
+    .icon-button {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    .icon-button:hover {
+      color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <h1>Textarea with Icon Button</h1>
+
+    <!-- Textarea with Icon Button inside -->
+    <div class="textarea-wrapper">
+      <textarea class="form-control" id="question" placeholder="Type your question here..." rows="5"></textarea>
+      <button class="icon-button" onclick="alert('Icon button clicked!')">
+        <i class="bi bi-gear"></i> <!-- Bootstrap Icon -->
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

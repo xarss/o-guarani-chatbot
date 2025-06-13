@@ -1,0 +1,54 @@
+.user-message {
+  font-weight: 700;
+  color: white;
+  text-align: right;
+  margin: 1.2rem 0;
+}
+
+.textarea-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.textarea-wrapper textarea {
+  width: 100%;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.icon-button {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  color: #DDD;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container-2 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+textarea { 
+  resize: none;
+}
